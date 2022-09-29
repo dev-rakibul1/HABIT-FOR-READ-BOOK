@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Header from "././../header/Header";
 import MainBlock from "./mainBlock/MainBlock";
 import Summary from "./summary/Summary";
 
@@ -23,10 +22,8 @@ const Main = () => {
 
   return (
     <div className="w-[90%] mx-auto p-4 ">
-      <Header></Header>
-      <h4>Select your book</h4>
       <div className="md:flex gap-4">
-        <div className="md:w-[75%] mx-auto w-[95%] p-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+        <div className="md:w-[75%] mx-auto w-[95%] p-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {books.map((book) => (
             <MainBlock
               book={book}
