@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { currentTime } from "../../utility/utility";
+import { currentTime, getTime } from "../../utility/utility";
 import AddBreak from "./addbrea/AddBreak";
 import ExerciseDetails from "./exerciseDetails/ExerciseDetails";
 
@@ -31,6 +31,8 @@ const Summary = ({ calculate, books }) => {
 
     // local storage add
     currentTime(time, id);
+
+    const getStoreTime = getTime();
   };
 
   return (

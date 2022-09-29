@@ -16,4 +16,4 @@ const getTime = () => {
   return preserveTime;
 };
 
-export { currentTime };
+export { currentTime, getTime };
