@@ -36,7 +36,10 @@ const Main = () => {
           ))}
         </div>
         <div className="md:w-[25%] mx-auto w-[95%]  md:mt-0 mt-5 p-4 border">
-          <Summary calculate={calculate} books={books}></Summary>
+          <Summary calculate={calculate}></Summary>
+          {/* {books.map((book) => (
+            <Summary book={book} key={book.id} calculate={calculate}></Summary>
+          ))} */}
         </div>
       </div>
     </div>

@@ -12,23 +12,25 @@ const summaryDetails = {
   images: "https://i.ibb.co/WFYph7d/me.jpg",
   id: 4524532454447,
 
-  breakTime: {
-    first: 2.5,
-    second: 5,
-    third: 7.5,
-    forth: 10,
-    fifth: 15,
-  },
+  breakTime: [
+    { first: 2.5, id1: 1 },
+    { second: 5, id2: 2 },
+    { third: 7.5, id3: 3 },
+    { forth: 10, id4: 4 },
+    { fifth: 15, id5: 5 },
+  ],
 };
 
 const { name, address, weight, height, age, images, id } = summaryDetails;
 
-const Summary = ({ calculate }) => {
+const Summary = ({ calculate, books }) => {
   const [breakTime, setBreakTime] = useState("");
 
-  const breakTimeHandler = (time) => {
+  const breakTimeHandler = (time, id) => {
     setBreakTime(time);
-    currentTime(time);
+
+    // local storage add
+    currentTime(time, id);
   };
 
   return (
@@ -66,6 +68,7 @@ const Summary = ({ calculate }) => {
       <AddBreak
         summaryDetails={summaryDetails}
         breakTimeHandler={breakTimeHandler}
+        books={books}
       ></AddBreak>
       <ExerciseDetails
         calculate={calculate}

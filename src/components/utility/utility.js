@@ -1,8 +1,9 @@
-const currentTime = (key, setTime) => {
+const currentTime = (id, time) => {
   //   const time = setTime;
+  //   console.log(key, setTime);
 
   const preserveTime = getTime();
-  preserveTime[key] = setTime;
+  preserveTime[id] = time;
   localStorage.setItem("timeList", JSON.stringify(preserveTime));
 };
 
