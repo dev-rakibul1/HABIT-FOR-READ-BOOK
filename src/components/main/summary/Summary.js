@@ -13,11 +13,11 @@ const summaryDetails = {
   id: 4524532454447,
 
   breakTime: [
-    { first: 2.5, id1: 1 },
-    { second: 5, id2: 2 },
-    { third: 7.5, id3: 3 },
-    { forth: 10, id4: 4 },
-    { fifth: 15, id5: 5 },
+    { first: 2.5, id1: 1544 },
+    { second: 5, id2: 2655 },
+    { third: 7.5, id3: 3478 },
+    { forth: 10, id4: 4874 },
+    { fifth: 15, id5: 5687 },
   ],
 };
 

@@ -6,25 +6,6 @@ const AddBreak = ({ summaryDetails, breakTimeHandler, books }) => {
   const { third, id3 } = summaryDetails.breakTime[2];
   const { forth, id4 } = summaryDetails.breakTime[3];
   const { fifth, id5 } = summaryDetails.breakTime[4];
-  // console.log(id1);
-  // const { first, second, third, forth, fifth } = summaryDetails.breakTime[0];
-
-  // const data = summaryDetails.breakTime;
-  // data.map((x) => console.log(x.id));
-
-  // const [bookid, setBookId] = useState([]);
-  // const [justId, setJustId] = useState("");
-
-  // useEffect(() => {
-  //   fetch("./fakedata/fakeDB.json")
-  //     .then((response) => response.json())
-  //     .then((data) => setBookId(data))
-  //     .catch((error) => {
-  //       console.error("Error:", error);
-  //     });
-  // }, []);
-
-  // bookid.map((id) => console.log(id.id));
 
   return (
     <div className="mt-10">

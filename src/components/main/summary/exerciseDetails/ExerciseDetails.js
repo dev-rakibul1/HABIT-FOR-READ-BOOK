@@ -1,10 +1,14 @@
 import React from "react";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ExerciseDetails = ({ calculate, breakTime }) => {
   // total calculate
   const totalTime = calculate.reduce((prev, current) => {
     return prev + current;
   }, 0);
+
+  const notify = () => toast("Wow congratulations!!!");
 
   return (
     <div className="mt-10">
@@ -19,9 +23,14 @@ const ExerciseDetails = ({ calculate, breakTime }) => {
           {breakTime ? breakTime : 0} minutes
         </span>
       </div>
-      <button className="bg-lime-900 py-2 px-4 w-full text-white rounded mt-7">
+
+      <button
+        onClick={notify}
+        className="bg-lime-900 py-2 px-4 w-full text-white rounded mt-7"
+      >
         Activity Completed
       </button>
+      <ToastContainer />
     </div>
   );
 };
