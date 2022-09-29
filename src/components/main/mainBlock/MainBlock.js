@@ -1,8 +1,8 @@
 import React from "react";
 
-const MainBlock = ({ book }) => {
-  const { title, images, time, description, reading } = book;
-  console.log(images);
+const MainBlock = ({ book, onClickTimerAdd }) => {
+  const { title, images, time, description, reading, id } = book;
+  // console.log(images);
   return (
     <div>
       <div>
@@ -18,7 +18,10 @@ const MainBlock = ({ book }) => {
             </p>
             <p>{reading}</p>
             <div className="card-actions justify-end mt-7">
-              <button className="bg-lime-900 py-2 px-4 text-white rounded w-full">
+              <button
+                onClick={() => onClickTimerAdd(time)}
+                className="bg-lime-900 py-2 px-4 text-white rounded w-full"
+              >
                 Add to list
               </button>
             </div>

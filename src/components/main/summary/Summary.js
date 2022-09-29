@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { currentTime } from "../../utility/utility";
 import AddBreak from "./addbrea/AddBreak";
 import ExerciseDetails from "./exerciseDetails/ExerciseDetails";
 
@@ -19,9 +20,17 @@ const summaryDetails = {
     fifth: 15,
   },
 };
+
 const { name, address, weight, height, age, images, id } = summaryDetails;
 
-const Summary = () => {
+const Summary = ({ calculate }) => {
+  const [breakTime, setBreakTime] = useState("");
+
+  const breakTimeHandler = (time) => {
+    setBreakTime(time);
+    currentTime(time);
+  };
+
   return (
     <div className=" sticky top-0 pt-7">
       <div className="flex justify-evenly">
@@ -54,8 +63,14 @@ const Summary = () => {
         </span>
       </div>
 
-      <AddBreak summaryDetails={summaryDetails}></AddBreak>
-      <ExerciseDetails></ExerciseDetails>
+      <AddBreak
+        summaryDetails={summaryDetails}
+        breakTimeHandler={breakTimeHandler}
+      ></AddBreak>
+      <ExerciseDetails
+        calculate={calculate}
+        breakTime={breakTime}
+      ></ExerciseDetails>
     </div>
   );
 };
