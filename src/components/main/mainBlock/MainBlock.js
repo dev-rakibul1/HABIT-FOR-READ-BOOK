@@ -11,12 +11,13 @@ const MainBlock = ({ book, onClickTimerAdd }) => {
             <img src={images} alt="book" className="w-full h-[160px]" />
           </figure>
           <div className="card-body p-2">
-            <h2 className="card-title">{title}</h2>
-            <p>{description.substring(0, 80)}</p>
-            <p>
-              Time require: <strong>{time} hours</strong>
+            <h2 className="card-title text-lime-900">{title}</h2>
+            <p className="text-gray-500">{description.substring(0, 80)}</p>
+            <p className="text-gray-500">
+              Time require:{" "}
+              <strong className="text-gray-700">{time} hours</strong>
             </p>
-            <p>{reading}</p>
+            <p className="text-gray-500">{reading}</p>
             <div className="card-actions justify-end mt-7">
               <button
                 onClick={() => onClickTimerAdd(time)}
