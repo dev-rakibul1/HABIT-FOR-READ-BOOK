@@ -1,3 +1,5 @@
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import { currentTime } from "../../utility/utility";
 import AddBreak from "./addbrea/AddBreak";
@@ -41,7 +43,14 @@ const Summary = ({ calculate, books }) => {
         </div>
         <div>
           <h4 className="font-semibold text-base">{name}</h4>
-          <p className="font-extralight text-xs">{address}</p>
+          <p className="font-extralight text-xs">
+            {" "}
+            <FontAwesomeIcon
+              icon={faLocationDot}
+              className="text-lime-900"
+            />{" "}
+            {address}
+          </p>
         </div>
       </div>
       <div className="mt-10 flex justify-evenly">
